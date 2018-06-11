@@ -3,7 +3,7 @@
 <% @artists.each do |artist| %>
   <div><%= link_to artist.name, artist_path(artist) %> -
     <%=
-      c = self.songs.count
+      c = artist.song_count
       s = ""
       if c != 1
         s = "#{c} songs"
